@@ -1,0 +1,7 @@
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\bin\Debug\e-PayZapp.Repository.dll
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\bin\Debug\e-PayZapp.Repository.pdb
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\bin\Debug\e-PayZapp.connection.dll
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\bin\Debug\e-PayZapp.connection.pdb
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\obj\Debug\e-PayZapp.Repository.csprojResolveAssemblyReference.cache
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\obj\Debug\e-PayZapp.Repository.dll
+D:\E-PayZapp\e-Payzapp.web\e-PayZapp.Repository\obj\Debug\e-PayZapp.Repository.pdb

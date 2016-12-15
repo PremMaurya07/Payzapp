@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4894F645-845A-4F63-8548-49E2B50843C5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>e_Payzapp.web</RootNamespace>
+    <AssemblyName>e-Payzapp.web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="e-PayZapp.Repository">
+      <HintPath>..\e-PayZapp.Repository\bin\Debug\e-PayZapp.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.1.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Payment">
+      <HintPath>..\..\Payment\bin\Debug\Payment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutus.aspx" />
+    <Content Include="Assets\css\Tab\bootstrap-material-design.css" />
+    <Content Include="Assets\css\Tab\dist.css" />
+    <Content Include="Assets\css\Tab\preview.min.css" />
+    <Content Include="Assets\css\Tab\reset.css" />
+    <Content Include="Assets\css\Tab\style.css" />
+    <Content Include="Assets\img\asidebar.jquery.js" />
+    <Content Include="Assets\img\hdfc_program_logo.png" />
+    <Content Include="Assets\img\main.js" />
+    <Content Include="Assets\img\modernizr.js" />
+    <Content Include="Assets\js\asidemenu.js" />
+    <Content Include="close_pop.png" />
+    <Content Include="contact.aspx" />
+    <Content Include="DeveloperJSPoint\Designerpoint.js" />
+    <Content Include="DeveloperJSPoint\maxlength.js" />
+    <Content Include="DeveloperJSPoint\ProviderOpr.js" />
+    <Content Include="DeveloperJSPoint\Statefortelecom.js" />
+    <Content Include="Global.asax" />
+    <Content Include="JavascriptLib\SecurityManagment.js" />
+    <Content Include="JavascriptLib\Userdata.js" />
+    <Content Include="JavascriptLib\UserManagement.js" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Home.Master" />
+    <Content Include="Assets\css\Tab\bootstrap-responsive.min.css" />
+    <Content Include="Assets\css\partials\_layout.scss" />
+    <Content Include="Assets\css\partials\_mixins.scss" />
+    <Content Include="Assets\css\partials\_variables.scss" />
+    <Content Include="Assets\css\scss\style.scss" />
+    <Content Include="PayUMoney\Default.aspx" />
+    <Content Include="PayUMoney\false.aspx" />
+    <Content Include="PayUMoney\ResponseHandling.aspx" />
+    <Content Include="User_Section\Cards.aspx" />
+    <Content Include="User_Section\css\lib\bootstrapvalidator\bootstrapvalidator.min.html" />
+    <Content Include="User_Section\css\lib\bootstrap\bootstrap.css" />
+    <Content Include="User_Section\css\lib\bootstrap_tour\bootstrap-tour.min.css" />
+    <Content Include="User_Section\css\lib\c3\c3.css" />
+    <Content Include="User_Section\css\lib\clockpicker\clockpicker.css" />
+    <Content Include="User_Section\css\lib\datatables\datatables.css" />
+    <Content Include="User_Section\css\lib\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="User_Section\css\lib\font-awesome\font-awesome.min.css" />
+    <Content Include="User_Section\css\lib\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="User_Section\css\lib\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="User_Section\css\lib\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="User_Section\css\lib\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="User_Section\css\lib\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="User_Section\css\lib\fullcalendar\fullcalendar.css" />
+    <Content Include="User_Section\css\lib\fullcalendar\fullcalendar.print.css" />
+    <Content Include="User_Section\css\lib\iCheck\all.css" />
+    <Content Include="User_Section\css\lib\iCheck\flat\aero%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\aero.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\blue%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\blue.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\flat%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\flat.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\green%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\green.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\grey%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\grey.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\orange%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\orange.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\pink%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\pink.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\purple%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\purple.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\red%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\red.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\yellow%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\yellow.png" />
+    <Content Include="User_Section\css\lib\iCheck\flat\_all.css" />
+    <Content Include="User_Section\css\lib\iCheck\futurico\futurico%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\futurico\futurico.css" />
+    <Content Include="User_Section\css\lib\iCheck\futurico\futurico.png" />
+    <Content Include="User_Section\css\lib\iCheck\line\line%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\line\line.png" />
+    <Content Include="User_Section\css\lib\iCheck\line\_all.css" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\aero%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\aero.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\blue%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\blue.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\green%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\green.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\grey%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\grey.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\orange%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\orange.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\pink%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\pink.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\purple%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\purple.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\red%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\red.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\yellow%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\yellow.png" />
+    <Content Include="User_Section\css\lib\iCheck\minimal\_all.css" />
+    <Content Include="User_Section\css\lib\iCheck\polaris\polaris%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\polaris\polaris.css" />
+    <Content Include="User_Section\css\lib\iCheck\polaris\polaris.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\aero%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\aero.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\blue%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\blue.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\green%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\green.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\grey%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\grey.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\orange%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\orange.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\pink%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\pink.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\purple%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\purple.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\red%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\red.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\square%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\square.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\yellow%402x.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\yellow.png" />
+    <Content Include="User_Section\css\lib\iCheck\square\_all.css" />
+    <Content Include="User_Section\css\lib\ionicons\ionicons.min.css" />
+    <Content Include="User_Section\css\lib\jasny\jasny-bootstrap.min.css" />
+    <Content Include="User_Section\css\lib\jqvmap\jqvmap.css" />
+    <Content Include="User_Section\css\lib\lists\lists.css" />
+    <Content Include="User_Section\css\lib\morris\morris-0.4.3.min.css" />
+    <Content Include="User_Section\css\lib\perfectscrollbar\perfect-scrollbar.css" />
+    <Content Include="User_Section\css\lib\slider\slider.css" />
+    <Content Include="User_Section\css\lib\summernote\summernote-bs3.css" />
+    <Content Include="User_Section\css\lib\summernote\summernote.css" />
+    <Content Include="User_Section\css\lib\tabdrop\tabdrop.css" />
+    <Content Include="User_Section\css\lib\timeline\timeline.css" />
+    <Content Include="User_Section\css\lib\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="User_Section\css\lib\treeview\treeview.css" />
+    <Content Include="User_Section\css\styles.css" />
+    <Content Include="User_Section\Dashboard.aspx" />
+    <Content Include="User_Section\Favourite.aspx" />
+    <Content Include="User_Section\fonts\font-awesome\fontawesome-webfont862f.svg" />
+    <Content Include="User_Section\fonts\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="User_Section\fonts\ionicons\ioniconsbab9.svg" />
+    <Content Include="User_Section\histroy.aspx" />
+    <Content Include="User_Section\images\21.jpg" />
+    <Content Include="User_Section\images\56.jpg" />
+    <Content Include="User_Section\images\59.jpg" />
+    <Content Include="User_Section\images\87.jpg" />
+    <Content Include="User_Section\images\about.2.jpg" />
+    <Content Include="User_Section\images\admin_link.jpg" />
+    <Content Include="User_Section\images\app.jpg" />
+    <Content Include="User_Section\images\devices.png" />
+    <Content Include="User_Section\images\hdfc_program_logo.png" />
+    <Content Include="User_Section\images\front_link.jpg" />
+    <Content Include="User_Section\images\home_img1.jpg" />
+    <Content Include="User_Section\images\image1.jpg" />
+    <Content Include="User_Section\images\image2.jpg" />
+    <Content Include="User_Section\images\image3.jpg" />
+    <Content Include="User_Section\images\logo.png" />
+    <Content Include="User_Section\images\logo_white.fw.png" />
+    <Content Include="User_Section\images\pattern_1x.jpg" />
+    <Content Include="User_Section\images\profile_bg.jpg" />
+    <Content Include="User_Section\images\sample_pages.jpg" />
+    <Content Include="User_Section\images\user1.png" />
+    <Content Include="User_Section\images\user2.png" />
+    <Content Include="User_Section\images\user3.png" />
+    <Content Include="User_Section\images\user4.png" />
+    <Content Include="User_Section\images\user5.png" />
+    <Content Include="User_Section\jquery-1.10.2.js" />
+    <Content Include="User_Section\js\lib\bootstrapvalidator\bootstrapValidator.min.js" />
+    <Content Include="User_Section\js\lib\bootstrap\bootstrap.min.js" />
+    <Content Include="User_Section\js\lib\bootstrap_growl\bootstrap-growl.min.js" />
+    <Content Include="User_Section\js\lib\bootstrap_tour\bootstrap-tour.min.js" />
+    <Content Include="User_Section\js\lib\c3\c3.js" />
+    <Content Include="User_Section\js\lib\c3\d3.v3.min.js" />
+    <Content Include="User_Section\js\lib\ckeditor\ckeditor.js" />
+    <Content Include="User_Section\js\lib\clockpicker\clockpicker.js" />
+    <Content Include="User_Section\js\lib\datatables\datatables.js" />
+    <Content Include="User_Section\js\lib\datatables\jquery.dataTables.min.js" />
+    <Content Include="User_Section\js\lib\daterangepicker\daterangepicker.js" />
+    <Content Include="User_Section\js\lib\flot\jquery.flot.js" />
+    <Content Include="User_Section\js\lib\flot\jquery.flot.pie.min.js" />
+    <Content Include="User_Section\js\lib\flot\jquery.flot.resize.js" />
+    <Content Include="User_Section\js\lib\flot\jquery.flot.stack.js" />
+    <Content Include="User_Section\js\lib\flot\jquery.flot.time.js" />
+    <Content Include="User_Section\js\lib\flot\jquery.flot.tooltip.js" />
+    <Content Include="User_Section\js\lib\fullcalendar\fullcalendar.js" />
+    <Content Include="User_Section\js\lib\gaugejs\gauge.min.js" />
+    <Content Include="User_Section\js\lib\gmaps\gmaps.js" />
+    <Content Include="User_Section\js\lib\icheck\icheck.min.js" />
+    <Content Include="User_Section\js\lib\jasny\jasny-bootstrap.min.js" />
+    <Content Include="User_Section\js\lib\jquery\jquery-1.10.2.min.js" />
+    <Content Include="User_Section\js\lib\jquery\jquery-ui.custom.min.js" />
+    <Content Include="User_Section\js\lib\jqvmap\data\jquery.vmap.sampledata.js" />
+    <Content Include="User_Section\js\lib\jqvmap\jquery.vmap.js" />
+    <Content Include="User_Section\js\lib\jqvmap\maps\continents\jquery.vmap.asia.js" />
+    <Content Include="User_Section\js\lib\jqvmap\maps\continents\jquery.vmap.australia.js" />
+    <Content Include="User_Section\js\lib\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="User_Section\js\lib\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="User_Section\js\lib\mask\jquery.mask.min.js" />
+    <Content Include="User_Section\js\lib\momentjs\moment.min.js" />
+    <Content Include="User_Section\js\lib\morris\morris.js" />
+    <Content Include="User_Section\js\lib\morris\raphael-min.js" />
+    <Content Include="User_Section\js\lib\nestable\jquery.nestable.js" />
+    <Content Include="User_Section\js\lib\slider\bootstrap-slider.js" />
+    <Content Include="User_Section\js\lib\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="User_Section\js\lib\sparklines\jquery.sparkline.min.js" />
+    <Content Include="User_Section\js\lib\summernote\summernote.min.js" />
+    <Content Include="User_Section\js\lib\tabdrop\bootstrap-tabdrop.js" />
+    <Content Include="User_Section\js\lib\tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="User_Section\js\lib\timepicker\bootstrap-timepicker.js" />
+    <Content Include="User_Section\js\pages\chart_c3.js" />
+    <Content Include="User_Section\js\pages\chart_flot.js" />
+    <Content Include="User_Section\js\pages\chart_morris.js" />
+    <Content Include="User_Section\js\pages\chart_others.js" />
+    <Content Include="User_Section\js\pages\form_advanced.js" />
+    <Content Include="User_Section\js\pages\form_validation.js" />
+    <Content Include="User_Section\js\pages\front_end.js" />
+    <Content Include="User_Section\js\pages\index_1.js" />
+    <Content Include="User_Section\js\pages\index_2.js" />
+    <Content Include="User_Section\js\pages\map_google.js" />
+    <Content Include="User_Section\js\pages\map_vector.js" />
+    <Content Include="User_Section\js\pages\ui_alerts.js" />
+    <Content Include="User_Section\js\pages\ui_calendar.js" />
+    <Content Include="User_Section\js\scripts.min.js" />
+    <Content Include="User_Section\UserSection.Master" />
+    <Content Include="User_Section\fonts\font-awesome\fontawesome-webfont862f.eot" />
+    <Content Include="User_Section\fonts\font-awesome\fontawesome-webfont862f.ttf" />
+    <Content Include="User_Section\fonts\font-awesome\fontawesome-webfont862f.woff" />
+    <Content Include="User_Section\fonts\font-awesome\fontawesome-webfontd41d.eot" />
+    <Content Include="User_Section\fonts\glyphicons\glyphicons-halflings-regular.eot" />
+    <Content Include="User_Section\fonts\glyphicons\glyphicons-halflings-regular.ttf" />
+    <Content Include="User_Section\fonts\glyphicons\glyphicons-halflings-regular.woff" />
+    <Content Include="User_Section\fonts\glyphicons\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="User_Section\fonts\ionicons\ioniconsbab9.eot" />
+    <Content Include="User_Section\fonts\ionicons\ioniconsbab9.ttf" />
+    <Content Include="User_Section\fonts\ionicons\ioniconsbab9.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\blog-post.html" />
+    <Content Include="Assets\blog.html" />
+    <Content Include="Assets\css\animate.min.css" />
+    <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\Developer.css" />
+    <Content Include="Assets\css\lity.min.css" />
+    <Content Include="Assets\css\owl.carousel.css" />
+    <Content Include="Assets\css\owl.video.play.html" />
+    <Content Include="Assets\css\reset.css" />
+    <Content Include="Assets\css\screen.css" />
+    <Content Include="Assets\css\theme\orange.css" />
+    <Content Include="Assets\img\app-pics\1.png" />
+    <Content Include="Assets\img\app-pics\10.png" />
+    <Content Include="Assets\img\app-pics\11.png" />
+    <Content Include="Assets\img\app-pics\12.png" />
+    <Content Include="Assets\img\app-pics\2.png" />
+    <Content Include="Assets\img\app-pics\3.png" />
+    <Content Include="Assets\img\app-pics\4.png" />
+    <Content Include="Assets\img\app-pics\5.png" />
+    <Content Include="Assets\img\app-pics\6.png" />
+    <Content Include="Assets\img\app-pics\7.png" />
+    <Content Include="Assets\img\app-pics\8.png" />
+    <Content Include="Assets\img\app-pics\9.png" />
+    <Content Include="Assets\img\app-store.png" />
+    <Content Include="Assets\img\banner.jpg" />
+    <Content Include="Assets\img\blog-img1.jpg" />
+    <Content Include="Assets\img\blog-img2.jpg" />
+    <Content Include="Assets\img\blog-img3.jpg" />
+    <Content Include="Assets\img\blog\header_blog-post2.jpg" />
+    <Content Include="Assets\img\blog\header_blog-post3.jpg" />
+    <Content Include="Assets\img\blog\header_blog-post4.jpg" />
+    <Content Include="Assets\img\blog\header_blog-post5.jpg" />
+    <Content Include="Assets\img\blog\header_blog-post6.jpg" />
+    <Content Include="Assets\img\blog\header_blog-post7.jpg" />
+    <Content Include="Assets\img\blog\image1.jpg" />
+    <Content Include="Assets\img\features-phone1.png" />
+    <Content Include="Assets\img\google-play.png" />
+    <Content Include="Assets\img\invest-bg1.jpg" />
+    <Content Include="Assets\img\main-phone.png" />
+    <Content Include="Assets\img\main-phone2.png" />
+    <Content Include="Assets\img\nav_bg.jpg" />
+    <Content Include="Assets\img\team\team1.jpg" />
+    <Content Include="Assets\img\team\team2.jpg" />
+    <Content Include="Assets\img\team\team3.jpg" />
+    <Content Include="Assets\img\team\team4.jpg" />
+    <Content Include="Assets\img\team\team5.jpg" />
+    <Content Include="Assets\img\team\team6.jpg" />
+    <Content Include="Assets\index.html" />
+    <Content Include="Assets\js\inview-control.js" />
+    <Content Include="Assets\js\main.js" />
+    <Content Include="Assets\php\contact.js" />
+    <Content Include="Assets\php\validator.js" />
+    <Content Include="Assets\vendor\bootstrap.min.js" />
+    <Content Include="Assets\vendor\Developer.js" />
+    <Content Include="Assets\vendor\jquery-2.1.1.js" />
+    <Content Include="Assets\vendor\jquery.inview.min.js" />
+    <Content Include="Assets\vendor\jquery.matchHeight-min.js" />
+    <Content Include="Assets\vendor\lity.min.js" />
+    <Content Include="Assets\vendor\modernizr.js" />
+    <Content Include="Assets\vendor\owl.carousel.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="scripts\ai.0.22.19-build00125.js" />
+    <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="support.aspx" />
+    <Content Include="User_Section\wallet.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomeApi\DefaultController.cs" />
+    <Compile Include="CustomeApi\ePayZappController.cs" />
+    <Compile Include="CustomeApi\ePayZappLoginController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PayUMoney\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayUMoney\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayUMoney\false.aspx.cs">
+      <DependentUpon>false.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayUMoney\false.aspx.designer.cs">
+      <DependentUpon>false.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayUMoney\ResponseHandling.aspx.cs">
+      <DependentUpon>ResponseHandling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayUMoney\ResponseHandling.aspx.designer.cs">
+      <DependentUpon>ResponseHandling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="support.aspx.cs">
+      <DependentUpon>support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="support.aspx.designer.cs">
+      <DependentUpon>support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Section\Cards.aspx.cs">
+      <DependentUpon>Cards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Section\Cards.aspx.designer.cs">
+      <DependentUpon>Cards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Section\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Section\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Section\Favourite.aspx.cs">
+      <DependentUpon>Favourite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Section\Favourite.aspx.designer.cs">
+      <DependentUpon>Favourite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Section\histroy.aspx.cs">
+      <DependentUpon>histroy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Section\histroy.aspx.designer.cs">
+      <DependentUpon>histroy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Section\UserSection.Master.cs">
+      <DependentUpon>UserSection.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Section\UserSection.Master.designer.cs">
+      <DependentUpon>UserSection.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User_Section\wallet.aspx.cs">
+      <DependentUpon>wallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Section\wallet.aspx.designer.cs">
+      <DependentUpon>wallet.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59667</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59667/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

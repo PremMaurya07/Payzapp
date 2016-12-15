@@ -1,0 +1,318 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="e_Payzapp.web.Home" %>
+
+<!DOCTYPE html>
+
+<html class="no-js">
+<head runat="server">
+    <title>e-PayZapp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="Assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/animate.min.css">
+    <link rel="stylesheet" href="Assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="Assets/css/lity.min.css">
+    <link href="Assets/css/screen.css" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+      <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+      <![endif]-->
+    <script src="Assets/vendor/modernizr.js"></script>
+    <!-- Modernizr -->
+    <link rel="stylesheet" href="Assets/css/theme/orange.css">
+    <link href="Assets/css/Developer.css" rel="stylesheet" />
+    <link href="Assets/css/Tab/reset.css" rel="stylesheet" />
+    <link href="Assets/css/Tab/dist.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="aside">
+
+            <div class="aside-header">
+                Prepaid Plan
+
+    <span class="close" data-dismiss="aside" aria-hidden="true">&times;</span>
+
+            </div>
+
+            <div class="aside-contents">
+
+                <p>Sidebar Content</p>
+
+            </div>
+
+        </div>
+        <div class="aside1">
+
+            <div class="aside1-header">
+
+                <div class="col-md-10">
+                    <img src="Assets/img/hdfc_program_logo.png" alt="logo" class="img-responsive" style="width: 85%" />
+
+                </div>
+                <div class="col-md-2">
+                    <span class="close" data-dismiss="aside1" aria-hidden="true">&times;</span>
+                </div>
+            </div>
+            <div class="aside1-contents">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="accordion" id="leftMenu">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" href="Default.aspx">
+                                        <i class="icon-home"></i>Home
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle"  href="support.aspx">
+                                        <i class="icon-th"></i>Support
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle"  href="aboutus.aspx">
+                                        <i class="icon-th-list"></i>About
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" href="contact.aspx">
+                                        <i class="icon-list-alt"></i>Contact
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle"  href="#collapseFive">
+                                        <i class="icon-cog"></i>Team
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseSix">
+                                        <i class="icon-file"></i>FAQ
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="wrapper">
+            <a href="#" class="cd-nav-trigger hidden-md hidden-lg sticky">Menu
+            <span class="cd-nav-icon"></span>
+
+                <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+                    <circle fill="transparent" stroke="#ffffff" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+                </svg>
+            </a>
+            <nav class="mobile-nav hidden-md hidden-lg">
+                <div class="social_holder">
+                    <a href="#" class="social-button animated dp1"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="social-button animated dp2"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="social-button animated dp3"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="social-button animated dp4"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="social-button animated dp5"><i class="fa fa-google-plus"></i></a>
+                </div>
+                <img alt="" src="img/nav_bg.jpg">
+            </nav>
+            <header class="sticky">
+                <div class="container-fluid nav-constraint animated fadeInDown dp3">
+                    <a href="index.html" class="logo">e-PayZapp <small>Mobile App</small> </a>
+                    <!-- Logo -->
+                    <span>
+                        <a href="#" class="button dl" onclick="$('.aside1').asidebar1('open')"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    </span>
+                    <span>
+                         <a href="#login-box"  id="loginform" runat="server" class="button dl login-window">Login / Sign In</a>
+                         <a href="#" id="username" runat="server"  class="profilesetting">
+                      </a>
+                    </span>
+                   
+
+                    <!-- Download Button -->
+                    <nav class="main_nav hidden-sm hidden-xs">
+                        <ul>
+
+                            <li><a href="#features"><i class="fa fa-bolt" aria-hidden="true"></i>Recharge</a></li>
+                            <li><a href="#"><i class="fa fa-bus" aria-hidden="true"></i>Bus Ticket</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div class="copy">
+                <a href="index.html" class="logo">e-PayZapp<small>Mobile App</small> </a>
+                <!-- Logo -->
+            </div>
+        </div>
+        <div class="aside1-backdrop"></div>
+        <div class="aside-backdrop"></div>
+        <div class="row">
+            <div id="login-box" class="login-popup" style="min-width: 700px;">
+                <a href="#" class="close">
+                    <img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-5" style="height: 500px; margin-top: -32px; background: #FD561F; border-right: 1px solid #fff">
+                        </div>
+                        <div class="col-md-7">
+
+                            <ul class="nav nav-tabs" style="background: none;">
+                                <li class="active"><a data-toggle="tab" href="#home" style="color:#000 !important">Login</a></li>
+                                <li><a data-toggle="tab" style="color:#000 !important" href="#menu1">Register</a></li>
+                            </ul>
+
+                            <div class="tab-content" style="padding-top: 10px;">
+                                <div id="home" class="tab-pane fade in active">
+                                    <div class="signin">
+
+                                          <span id="auth" style="color:red; font-family:Cambria; display:none; font-style:italic">sddsff</span>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label" for="MobileorEmail">Mobile Number/Email Address</label>
+                                            <input class="form-control" id="MobileorEmail" type="text">
+                                            <span id="errem" style="color:red; display:none;  font-family:Cambria; font-style:italic"></span>
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label" for="Password1">ePayZapp Password</label>
+                                            <input class="form-control" id="Password1" type="Password">
+                                              <span id="errpass"style="color:red; display:none;  font-family:Cambria; font-style:italic"></span>
+                                        </div>
+
+                                        <button class="submit button" type="button" onclick="login2();" id="Logins">Login</button>
+
+                                        <p>
+                                            <a class="forgot" href="#">Forgot your password?</a>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div id="menu1" class="tab-pane fade">
+
+                                    <div class="signin">
+
+                                        <div class="form-group label-floating">
+                                            <label class="control-label" for="FName">Name</label>
+                                            <input class="form-control" id="FName" type="text">
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label" for="Mobile">Mobile Number</label>
+                                            <input class="form-control" id="Mobile" type="text">
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label" for="Password">ePayZapp Password</label>
+                                            <input class="form-control" id="Password" type="text">
+                                        </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label" for="EmailAddress">Email Address</label>
+                                            <input class="form-control" id="EmailAddress" type="text">
+                                        </div>
+
+                                        <button class="submit button" type="button" id="Signup">Sign Up</button>
+
+                                        <p>
+                                            <a class="forgot" href="#">Forgot your password?</a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+    </form>
+
+    <script src="Assets/vendor/jquery-2.1.1.js"></script>
+    <script src="Assets/vendor/jquery.inview.min.js"></script>
+    <script src="Assets/vendor/owl.carousel.min.js"></script>
+    <script src="Assets/vendor/jquery.matchHeight-min.js"></script>
+    <script src="Assets/vendor/lity.min.js"></script>
+    <script src="Assets/vendor/bootstrap.min.js"></script>
+    <%-- <script src="php/validator.js"></script>
+    <script src="php/contact.js"></script>--%>
+    <script src="Assets/js/inview-control.js"></script>
+    <script src="Assets/js/main.js"></script>
+    <script src="Assets/js/asidemenu.js"></script>
+    <script src="Assets/img/asidebar.jquery.js"></script>
+    <!-- Resource jQuery -->
+    <script src="JavascriptLib/Userdata.js"></script>
+    <script src="JavascriptLib/SecurityManagment.js"></script>
+    <script type="text/javascript">
+
+      
+        
+        $(document).ready(function () {
+            Activate();
+           
+            $('a.login-window').click(function () {
+
+                // Getting the variable's value from a link 
+                var loginBox = $(this).attr('href');
+
+                //Fade in the Popup and add close button
+                $(loginBox).fadeIn(300);
+
+                //Set the center alignment padding + border
+
+                //var popMargTop = ($(loginBox).height() + 24) / 2; 
+                var popMargLeft = ($(loginBox).width() + 24) / 2;
+
+                $(loginBox).css({
+                    /*'margin-top' : -popMargTop,*/
+                    'margin-left': -popMargLeft
+                });
+
+                // Add the mask to body
+                $('body').append('<div id="mask"></div>');
+                $('#mask').fadeIn(300);
+
+                return false;
+            });
+
+            // When clicking on the button close or the mask layer the popup closed
+            $('a.close, #mask').on('click', function () {
+                $('#mask , .login-popup').fadeOut(300, function () {
+                    $('#mask').remove();
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+a:hover {
+  color:#e6f50c;
+}
+
+a:focus {
+  color: #e6f50c;
+}
+
+body a {
+  color: #E77470;
+}
+
+.button, section#contact form input.button1 {
+  background: #009688;
+  border-bottom: 2px solid #009688;
+}
+.button:hover, section#contact form input.button1:hover {
+  background: #cc550f;
+}
+
+section#download .social-button,
+.blog-post .social_holder a,
+.button2 {
+  background: #E77470;
+}
+section#download .social-button:hover,
+.blog-post .social_holder a:hover,
+.button2:hover {
+  background: #BE504C;
+}
+
+.owl-controls .owl-dot.active {
+  background: #E77470;
+}
+
+.fa,
+p.small,
+h3,
+h4,
+.messages {
+  color: #f1b40a;
+}
+
+ul.features {
+  color: #F3C7A1;
+}
+
+.gradient .button2 {
+  background: #F3C7A1;
+}
+
+.gradient, .shader-gradient {
+  background: #E77470;
+  background: -webkit-linear-gradient(45deg, #B84442, #C26A4D);
+  background: linear-gradient(45deg, #B84442, #C26A4D);
+}
+
+.mobile-nav .social_holder a, .shader-primary {
+  background: #E77470;
+}

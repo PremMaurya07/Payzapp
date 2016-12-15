@@ -1,0 +1,5 @@
+D:\E-PayZapp\e-PayZapp.connection\bin\Debug\e-PayZapp.connection.dll
+D:\E-PayZapp\e-PayZapp.connection\bin\Debug\e-PayZapp.connection.pdb
+D:\E-PayZapp\e-PayZapp.connection\obj\Debug\e-PayZapp.connection.csprojResolveAssemblyReference.cache
+D:\E-PayZapp\e-PayZapp.connection\obj\Debug\e-PayZapp.connection.dll
+D:\E-PayZapp\e-PayZapp.connection\obj\Debug\e-PayZapp.connection.pdb

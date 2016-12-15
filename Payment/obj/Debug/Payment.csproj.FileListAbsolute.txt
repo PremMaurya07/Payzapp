@@ -1,0 +1,5 @@
+D:\E-PayZapp\Payment\bin\Debug\Payment.dll
+D:\E-PayZapp\Payment\bin\Debug\Payment.pdb
+D:\E-PayZapp\Payment\obj\Debug\Payment.csprojResolveAssemblyReference.cache
+D:\E-PayZapp\Payment\obj\Debug\Payment.dll
+D:\E-PayZapp\Payment\obj\Debug\Payment.pdb
